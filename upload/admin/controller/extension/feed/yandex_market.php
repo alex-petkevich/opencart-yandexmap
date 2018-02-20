@@ -144,7 +144,7 @@ class ControllerExtensionFeedYandexMarket extends Controller {
 		$this->load->model('localisation/currency');
 		$currencies = $this->model_localisation_currency->getCurrencies();
 
-		$allowed_currencies = array_flip(array('RUR', 'RUB', 'BYR', 'KZT', 'UAH', 'BYN', 'BLR'));
+		$allowed_currencies = array_flip(array('RUR', 'RUB', 'KZT', 'UAH', 'BYN'));
 		$data['currencies'] = array_intersect_key($currencies, $allowed_currencies);
 
 		$data['header'] = $this->load->controller('common/header');
